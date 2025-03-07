@@ -26,16 +26,19 @@ public class Deck {
         }
     }
 
-    public  void shuffleDeck(){ 
-        Collections.shuffle(cards); //using the shuffle method from Collections (https://stackoverflow.com/questions/16112515/how-to-shuffle-an-arraylist)
+// Uses the shuffle method from Collections to shuffle the cards: (https://stackoverflow.com/questions/16112515/how-to-shuffle-an-arraylist)
+    public void shuffleDeck(){ 
+        Collections.shuffle(cards); 
     }
 
+// Draws the first card from the deck. Will always be random because the deck is shuffled
     public Card drawCard(){
         Card card = cards.get(0);
         cards.remove(0); //removing drawn card from list to avoid duplicates
         return card;
     }
 
+// Checks the status of the deck
     public boolean isEmpty(){
         if (cards.size() == 0) { //checking if the deck list size is 0
             return true;
